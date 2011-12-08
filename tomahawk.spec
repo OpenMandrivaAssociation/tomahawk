@@ -1,5 +1,5 @@
 Name:		tomahawk
-Version:	0.3.2
+Version:	0.3.3
 Release:	1
 Summary:	Qt playdar social music player
 License:	GPLv3
@@ -12,7 +12,7 @@ BuildRequires:	cmake
 BuildRequires:	boost-devel
 BuildRequires:	qjson-devel
 BuildRequires:	taglib-devel
-BuildRequires:	clucene-devel => 2.3.3.4
+#BuildRequires:	clucene-devel => 2.3.3.4
 BuildRequires:	libechonest-devel
 BuildRequires:	liblastfm-devel
 BuildRequires:	jreen-devel
