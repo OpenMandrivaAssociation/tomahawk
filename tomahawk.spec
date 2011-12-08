@@ -12,7 +12,7 @@ BuildRequires:	cmake
 BuildRequires:	boost-devel
 BuildRequires:	qjson-devel
 BuildRequires:	taglib-devel
-#BuildRequires:	clucene-devel => 2.3.3.4
+BuildRequires:	clucene-devel => 2.3.3.4
 BuildRequires:	libechonest-devel
 BuildRequires:	liblastfm-devel
 BuildRequires:	jreen-devel
