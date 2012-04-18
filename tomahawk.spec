@@ -1,11 +1,11 @@
 Name:		tomahawk
-Version:	0.3.3
+Version:	0.4.2
 Release:	1
 Summary:	Qt playdar social music player
 License:	GPLv3
 Group:		Sound
 URL:		http://tomahawk-player.org
-Source:		http://downloads.tomahawk-player.org/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.tomahawk-player.org/%{name}-%{version}.tar.bz2
 BuildRequires:	qt4-devel
 BuildRequires:	quazip-devel
 BuildRequires:	cmake
@@ -18,7 +18,7 @@ BuildRequires:	liblastfm-devel
 BuildRequires:	jreen-devel
 BuildRequires:	attica-devel
 BuildRequires:	qtweetlib-devel
-Patch0:		tomahawk-0.3.2-clucene.patch
+BuildRequires:	pkgconfig(phonon)
 
 %description
 Tomahawk Player is a next generation music player. 
@@ -30,7 +30,6 @@ Of course, it can also play songs from your local library. Make sure to check ou
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %cmake -DINTERNAL_JREEN=OFF -DBUILD_RELEASE=ON
