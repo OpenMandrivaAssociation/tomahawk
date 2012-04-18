@@ -22,11 +22,18 @@ BuildRequires:	pkgconfig(phonon)
 
 %description
 Tomahawk Player is a next generation music player. 
-It features custom stations (building upon the beatuiful Echo Nest), a playlist importer, 
-social connection to Twitter, Google Chat, and Jabber. Maybe most important of all: 
-It's able to find and pull music from different sources like YouTube, last.fm,
-SoundCloud, Skreemr, Spotify, and more using the Playdar approach.
-Of course, it can also play songs from your local library. Make sure to check out the video if you like to know more.
+It features custom stations (building upon the
+beatuiful Echo Nest), a playlist importer, 
+social connection to Twitter, Google Chat,
+and Jabber. Maybe most important of all: 
+It's able to find and pull music from
+different sources like YouTube, last.fm,
+SoundCloud, Skreemr, Spotify, and more
+using the Playdar approach.
+Of course, it can also play songs from
+your local library.
+Make sure to check out the video 
+if you like to know more.
 
 %prep
 %setup -q
