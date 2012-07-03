@@ -1,5 +1,5 @@
 Name:		tomahawk
-Version:	0.5.0
+Version:	0.5.2
 Release:	1
 Summary:	Qt playdar social music player
 License:	GPLv3
@@ -47,14 +47,9 @@ if you like to know more.
 
 %files
 %{_bindir}/tomahawk
-%{_libdir}/libtomahawk_portfwd.so
-%{_libdir}/libtomahawk_sipjabber.so
-%{_libdir}/libtomahawk_sipgoogle.so
-%{_libdir}/libtomahawk_siptwitter.so
-%{_libdir}/libtomahawk_sipzeroconf.so
-%{_libdir}/libtomahawklib.so
+%{_libdir}/*.so
 
 %{_prefix}/libexec/tomahawk_crash_reporter
 
 %{_datadir}/applications/tomahawk.desktop
-%{_datadir}/icons/
+%{_datadir}/icons/hicolor/*/*
