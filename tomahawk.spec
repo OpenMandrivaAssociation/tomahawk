@@ -1,5 +1,5 @@
 Name:		tomahawk
-Version:	0.5.2
+Version:	0.5.3
 Release:	1
 Summary:	Qt playdar social music player
 License:	GPLv3
