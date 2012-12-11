@@ -19,6 +19,7 @@ BuildRequires:	jreen-devel
 BuildRequires:	qtweetlib-devel
 BuildRequires:	pkgconfig(phonon)
 BuildRequires:	pkgconfig(libattica)
+Provides:	tomahawk-player
 
 %description
 Tomahawk Player is a next generation music player. 
