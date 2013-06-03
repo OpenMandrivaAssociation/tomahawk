@@ -1,0 +1,12 @@
+diff -urN tomahawk-0.7.0/thirdparty/libportfwd/CMakeLists.txt tomahawk-0.7.0-patched/thirdparty/libportfwd/CMakeLists.txt
+--- tomahawk-0.7.0/thirdparty/libportfwd/CMakeLists.txt	2013-05-02 06:26:27.000000000 +1100
++++ tomahawk-0.7.0-patched/thirdparty/libportfwd/CMakeLists.txt	2013-06-03 20:43:46.858177222 +1100
+@@ -20,7 +20,7 @@
+   ADD_DEFINITIONS( -DMACOSX -D_DARWIN_C_SOURCE )
+ endif ()
+ 
+-ADD_LIBRARY(tomahawk_portfwd SHARED
++ADD_LIBRARY(tomahawk_portfwd STATIC
+         # the needed bits of miniupnpc (no python module, no tests, no cli)
+         ${MINIUPNP_DIR}/connecthostport.c
+         ${MINIUPNP_DIR}/igd_desc_parse.c

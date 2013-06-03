@@ -5,11 +5,12 @@
 Summary:	Qt playdar social music player
 Name:		tomahawk
 Version:	0.7.0
-Release:	0.1
+Release:	1
 License:	GPLv3
 Group:		Sound
 Url:		http://tomahawk-player.org
 Source0:	http://downloads.tomahawk-player.org/%{name}-%{version}.tar.bz2
+Patch0:		tomahawk-0.7.0-static-portfwd.patch
 BuildRequires:	cmake
 BuildRequires:	boost-devel
 BuildRequires:	liblastfm-devel
@@ -73,11 +74,13 @@ software using %{name}.
 %{_includedir}/libtomahawk
 %{_libdir}/cmake/Tomahawk
 %{_libdir}/libtomahawklib.so
+%{_libdir}/libtomahawk_portfwd.a
 
 #----------------------------------------------------------------------------
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %cmake \
