@@ -6,29 +6,38 @@
 
 Summary:	Qt playdar social music player
 Name:		tomahawk
-Version:	0.8.2
+Version:	0.8.4
 Release:	1
 License:	GPLv3+
 Group:		Sound
 Url:		http://tomahawk-player.org
-Source0:	http://downloads.tomahawk-player.org/%{name}-%{version}.tar.bz2
-Source1:	tomahawk_ru.ts.tar.gz
-Source10:	%{name}.rpmlintrc
+Source0:	http://downloads.tomahawk-player.org/%{name}-%{version}.tar.gz
 BuildRequires:	cmake
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5Concurrent)
+BuildRequires:	pkgconfig(Qt5Svg)
+BuildRequires:	pkgconfig(Qt5Sql
+BuildRequires:	pkgconfig(Qt5Network)
+BuildRequires:	pkgconfig(Qt5Gui)
+BuildRequires:	pkgconfig(Qt5UiTools)
+BuildRequires:	pkgconfig(Qt5WebKitWidgets)
+BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5Xml)
+BuildRequires:	pkgconfig(Qt5DBus)
+BuildRequires:	pkgconfig(Qt5WinExtras)
+BuildRequires:	pkgconfig(Qt5LinguistTools)
+BuildRequires:	pkgconfig(Qt5Keychain)
+BuildRequires:	pkgconfig(TelepathyQt5)
+BuildRequires:	cmake(KF5Attica)
 BuildRequires:	boost-devel
 BuildRequires:	liblastfm-devel
-BuildRequires:	qt4-devel
-BuildRequires:	qtkeychain-devel
-BuildRequires:	qtweetlib-devel
-BuildRequires:	quazip-devel
 BuildRequires:	pkgconfig(gnutls)
-BuildRequires:	pkgconfig(libattica)
 BuildRequires:	pkgconfig(libclucene-core) >= 2.3.3.4
 BuildRequires:	pkgconfig(libechonest) >= 2.2
 BuildRequires:	pkgconfig(libjreen)
 BuildRequires:	pkgconfig(liblucene++)
 BuildRequires:	pkgconfig(libsparsehash)
-BuildRequires:	pkgconfig(phonon)
+BuildRequires:	pkgconfig(Phonon4Qt5)
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	pkgconfig(QJson)
 BuildRequires:	pkgconfig(taglib)
@@ -116,17 +125,10 @@ software using %{name}.
 
 %prep
 %setup -q
-
-pushd lang
-tar -xvzf %{SOURCE1}
-popd
+%cmake_qt5 -DWITH_KDE4=NO
 
 %build
-%cmake \
-	-DINTERNAL_JREEN=OFF \
-	-DBUILD_RELEASE=ON \
-	-DBUILD_HATCHET=OFF
-%make
+%make -C build
 
 %install
 %makeinstall_std -C build
