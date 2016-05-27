@@ -16,7 +16,7 @@ BuildRequires:	cmake
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Concurrent)
 BuildRequires:	pkgconfig(Qt5Svg)
-BuildRequires:	pkgconfig(Qt5Sql
+BuildRequires:	pkgconfig(Qt5Sql)
 BuildRequires:	pkgconfig(Qt5Network)
 BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(Qt5UiTools)
