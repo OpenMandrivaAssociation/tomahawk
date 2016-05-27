@@ -33,7 +33,6 @@ BuildRequires:	boost-devel
 BuildRequires:	liblastfm-devel
 BuildRequires:	pkgconfig(gnutls)
 BuildRequires:	pkgconfig(libclucene-core) >= 2.3.3.4
-BuildRequires:	pkgconfig(libechonest) >= 2.2
 BuildRequires:	pkgconfig(libjreen-qt5)
 BuildRequires:	pkgconfig(liblucene++)
 BuildRequires:	pkgconfig(libsparsehash)
