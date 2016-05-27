@@ -25,9 +25,9 @@ BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5WinExtras)
-BuildRequires:	pkgconfig(Qt5LinguistTools)
 BuildRequires:	pkgconfig(Qt5Keychain)
 BuildRequires:	pkgconfig(TelepathyQt5)
+BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	cmake(KF5Attica)
 BuildRequires:	boost-devel
 BuildRequires:	liblastfm-devel
