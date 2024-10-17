@@ -10,7 +10,7 @@ Version:	0.8.4
 Release:	1
 License:	GPLv3+
 Group:		Sound
-Url:		http://tomahawk-player.org
+Url:		https://tomahawk-player.org
 Source0:	http://downloads.tomahawk-player.org/%{name}-%{version}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(Qt5Core)
